@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.13.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.12.0...v4.13.0) (2025-02-11)
+
+### Features
+
+- eip-7702 support in aa-sdk/core, and sma7702 support in account-kit/smart-contracts ([#1287](https://github.com/alchemyplatform/aa-sdk/issues/1287)) ([8d5501f](https://github.com/alchemyplatform/aa-sdk/commit/8d5501f05e898f2711ef382524813a40f0edc999)), closes [#1269](https://github.com/alchemyplatform/aa-sdk/issues/1269) [#1309](https://github.com/alchemyplatform/aa-sdk/issues/1309) [#1314](https://github.com/alchemyplatform/aa-sdk/issues/1314) [#1328](https://github.com/alchemyplatform/aa-sdk/issues/1328) [#1329](https://github.com/alchemyplatform/aa-sdk/issues/1329) [#1335](https://github.com/alchemyplatform/aa-sdk/issues/1335) [#1339](https://github.com/alchemyplatform/aa-sdk/issues/1339) [#1338](https://github.com/alchemyplatform/aa-sdk/issues/1338)
+
+# [4.12.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.11.0...v4.12.0) (2025-02-04)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.11.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.10.0...v4.11.0) (2025-01-29)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.10.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.9.0...v4.10.0) (2025-01-28)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.9.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.8.0...v4.9.0) (2025-01-13)
+
+### Features
+
+- **client:** multi account light and alchemy consolidation ([#1264](https://github.com/alchemyplatform/aa-sdk/issues/1264)) ([18a9228](https://github.com/alchemyplatform/aa-sdk/commit/18a922830f5cfcfbed4bf12d064bdf4699e29c6c))
+
+# [4.8.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.7.0...v4.8.0) (2025-01-08)
+
+### Features
+
+- add ink mainnet ([#1225](https://github.com/alchemyplatform/aa-sdk/issues/1225)) ([0a6606e](https://github.com/alchemyplatform/aa-sdk/commit/0a6606e6a447f08406aa84308795118eda950531))
+- add mekong devnet support ([#1239](https://github.com/alchemyplatform/aa-sdk/issues/1239)) ([baad28a](https://github.com/alchemyplatform/aa-sdk/commit/baad28a6b1df36f66eae1fb723bbcfdc61592a51))
+- **chains:** add ink and soneium mainnet ([#1215](https://github.com/alchemyplatform/aa-sdk/issues/1215)) ([de83640](https://github.com/alchemyplatform/aa-sdk/commit/de83640936bfa43f04fa274efda5a968afc4d773))
+
+# [4.7.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.6.1...v4.7.0) (2024-12-16)
+
+**Note:** Version bump only for package @account-kit/infra
+
+## [4.6.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.6.0...v4.6.1) (2024-12-10)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.6.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.5.1...v4.6.0) (2024-12-03)
+
+### Features
+
+- **rn:** add alpha react native signer impl ([#1128](https://github.com/alchemyplatform/aa-sdk/issues/1128)) ([d87499e](https://github.com/alchemyplatform/aa-sdk/commit/d87499ee609e427def7abb6b02d565292d85c3cd)), closes [#1159](https://github.com/alchemyplatform/aa-sdk/issues/1159) [#1152](https://github.com/alchemyplatform/aa-sdk/issues/1152) [#1161](https://github.com/alchemyplatform/aa-sdk/issues/1161) [#1171](https://github.com/alchemyplatform/aa-sdk/issues/1171)
+
+## [4.5.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.5.0...v4.5.1) (2024-11-22)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.5.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.4.1...v4.5.0) (2024-11-18)
+
+**Note:** Version bump only for package @account-kit/infra
+
+## [4.4.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.4.0...v4.4.1) (2024-11-14)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.4.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.3.1...v4.4.0) (2024-11-13)
+
+### Features
+
+- add unichain mainnet ([#1136](https://github.com/alchemyplatform/aa-sdk/issues/1136)) ([de9ba7c](https://github.com/alchemyplatform/aa-sdk/commit/de9ba7c6e6c37a0be9b10af78927ba0cf2841cac))
+
+## [4.3.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.3.0...v4.3.1) (2024-11-07)
+
+**Note:** Version bump only for package @account-kit/infra
+
+# [4.3.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.2.0...v4.3.0) (2024-11-05)
+
+**Note:** Version bump only for package @account-kit/infra
+
 # [4.2.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.1.1...v4.2.0) (2024-10-29)
 
 ### Features

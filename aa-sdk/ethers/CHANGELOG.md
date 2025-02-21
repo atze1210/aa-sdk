@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.13.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.12.0...v4.13.0) (2025-02-11)
+
+### Features
+
+- eip-7702 support in aa-sdk/core, and sma7702 support in account-kit/smart-contracts ([#1287](https://github.com/alchemyplatform/aa-sdk/issues/1287)) ([8d5501f](https://github.com/alchemyplatform/aa-sdk/commit/8d5501f05e898f2711ef382524813a40f0edc999)), closes [#1269](https://github.com/alchemyplatform/aa-sdk/issues/1269) [#1309](https://github.com/alchemyplatform/aa-sdk/issues/1309) [#1314](https://github.com/alchemyplatform/aa-sdk/issues/1314) [#1328](https://github.com/alchemyplatform/aa-sdk/issues/1328) [#1329](https://github.com/alchemyplatform/aa-sdk/issues/1329) [#1335](https://github.com/alchemyplatform/aa-sdk/issues/1335) [#1339](https://github.com/alchemyplatform/aa-sdk/issues/1339) [#1338](https://github.com/alchemyplatform/aa-sdk/issues/1338)
+
+# [4.12.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.11.0...v4.12.0) (2025-02-04)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.11.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.10.0...v4.11.0) (2025-01-29)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.10.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.9.0...v4.10.0) (2025-01-28)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.9.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.8.0...v4.9.0) (2025-01-13)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.8.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.7.0...v4.8.0) (2025-01-08)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.7.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.6.1...v4.7.0) (2024-12-16)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+## [4.6.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.6.0...v4.6.1) (2024-12-10)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.6.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.5.1...v4.6.0) (2024-12-03)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+## [4.5.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.5.0...v4.5.1) (2024-11-22)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.5.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.4.1...v4.5.0) (2024-11-18)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+## [4.4.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.4.0...v4.4.1) (2024-11-14)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.4.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.3.1...v4.4.0) (2024-11-13)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+## [4.3.1](https://github.com/alchemyplatform/aa-sdk/compare/v4.3.0...v4.3.1) (2024-11-07)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
+# [4.3.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.2.0...v4.3.0) (2024-11-05)
+
+**Note:** Version bump only for package @aa-sdk/ethers
+
 # [4.2.0](https://github.com/alchemyplatform/aa-sdk/compare/v4.1.1...v4.2.0) (2024-10-29)
 
 **Note:** Version bump only for package @aa-sdk/ethers

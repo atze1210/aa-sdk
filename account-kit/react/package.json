@@ -1,6 +1,6 @@
 {
   "name": "@account-kit/react",
-  "version": "4.2.0",
+  "version": "4.13.0",
   "description": "React components and hooks for using Account Kit",
   "author": "Alchemy",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "!vitest.config.ts",
     "!.env",
     "!src/**/*.test.ts",
+    "!src/**/*.test-d.ts",
     "!src/__tests__/**/*"
   ],
   "exports": {
@@ -35,41 +36,41 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "prebuild": "npx tsx ./inject-version.ts",
+    "prebuild": "tsx ./inject-version.ts",
     "dev": "storybook dev",
     "build": "yarn clean && yarn build:esm && yarn build:types",
-    "build:dev": "lerna watch --scope='@account-kit/react' --include-dependencies -- lerna run build --scope=@account-kit/react",
     "build:esm": "tsc --project tsconfig.build.json --outDir ./dist/esm",
     "build:types": "tsc --project tsconfig.build.json --declarationDir ./dist/types --emitDeclarationOnly --declaration --declarationMap",
-    "docs:gen": "npx ak-docgen generate --in ./src/index.ts --out ../../site/pages/reference/account-kit/react",
+    "docs:gen": "node ../../doc-gen/dist/esm/cli.js generate --in ./src/index.ts --out ../../site/pages/reference/account-kit/react",
     "clean": "rm -rf ./dist",
     "test": "vitest --passWithNoTests",
     "test:run": "vitest run --passWithNoTests"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.2.8",
-    "@storybook/addon-interactions": "^8.2.8",
-    "@storybook/core-server": "^8.2.8",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/core-server": "^8.5.3",
     "@storybook/jest": "^0.2.3",
-    "@storybook/react-vite": "^8.2.8",
-    "@storybook/test-runner": "^0.13.0",
+    "@storybook/react-vite": "^8.5.3",
+    "@storybook/test": "^8.5.3",
     "@storybook/testing-library": "^0.2.2",
     "@tanstack/react-query": "^5.28.9",
     "autoprefixer": "^10.4.20",
     "msw": "^2.4.4",
-    "msw-storybook-addon": "^2.0.3",
+    "msw-storybook-addon": "^2.0.4",
     "postcss": "^8.4.45",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^8.2.8",
+    "storybook": "^8.5.3",
     "typescript": "^5.0.4",
     "typescript-template": "*",
     "vitest": "^2.0.4"
   },
   "dependencies": {
-    "@account-kit/core": "^4.2.0",
-    "@account-kit/infra": "^4.2.0",
-    "@account-kit/logging": "^4.2.0",
+    "@account-kit/core": "^4.13.0",
+    "@account-kit/infra": "^4.13.0",
+    "@account-kit/logging": "^4.13.0",
+    "@account-kit/signer": "^4.13.0",
     "@tanstack/react-form": "^0.33.0",
     "@tanstack/zod-form-adapter": "^0.33.0",
     "@wagmi/connectors": "^5.1.15",
@@ -83,11 +84,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.3",
-    "viem": "^2.20.0",
+    "viem": "^2.22.6",
     "wagmi": "^2.12.7"
   },
   "resolutions": {
-    "viem": "2.20.0"
+    "viem": "2.22.6"
   },
   "publishConfig": {
     "access": "public",

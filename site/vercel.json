@@ -1,4 +1,6 @@
 {
+  "installCommand": "cd .. && yarn install --ignore-engines",
+  "buildCommand": "cd .. && yarn build:site",
   "redirects": [
     {
       "source": "/getting-started/setup",
@@ -27,7 +29,7 @@
     },
     {
       "source": "/smart-accounts/accounts/guides/light-account",
-      "destination": "/smart-contracts/light-account",
+      "destination": "/smart-contracts/other-accounts/light-account",
       "statusCode": 301
     },
     {
