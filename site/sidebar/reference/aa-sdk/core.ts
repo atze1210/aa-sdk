@@ -75,6 +75,14 @@ export const aaSdkCoreReferenceSidebar: SidebarItem[] = [
         link: "/reference/aa-sdk/core/functions/deepHexlify",
       },
       {
+        text: "default7702GasEstimator",
+        link: "/reference/aa-sdk/core/functions/default7702GasEstimator",
+      },
+      {
+        text: "default7702UserOpSigner",
+        link: "/reference/aa-sdk/core/functions/default7702UserOpSigner",
+      },
+      {
         text: "defaultFeeEstimator",
         link: "/reference/aa-sdk/core/functions/defaultFeeEstimator",
       },
@@ -233,6 +241,15 @@ export const aaSdkCoreReferenceSidebar: SidebarItem[] = [
         ],
       },
       {
+        text: "EntityIdOverrideError",
+        items: [
+          {
+            text: "constructor",
+            link: "/reference/aa-sdk/core/classes/EntityIdOverrideError/constructor",
+          },
+        ],
+      },
+      {
         text: "EntryPointNotFoundError",
         items: [
           {
@@ -287,11 +304,38 @@ export const aaSdkCoreReferenceSidebar: SidebarItem[] = [
         ],
       },
       {
+        text: "InvalidEntityIdError",
+        items: [
+          {
+            text: "constructor",
+            link: "/reference/aa-sdk/core/classes/InvalidEntityIdError/constructor",
+          },
+        ],
+      },
+      {
         text: "InvalidEntryPointError",
         items: [
           {
             text: "constructor",
             link: "/reference/aa-sdk/core/classes/InvalidEntryPointError/constructor",
+          },
+        ],
+      },
+      {
+        text: "InvalidModularAccountV2Mode",
+        items: [
+          {
+            text: "constructor",
+            link: "/reference/aa-sdk/core/classes/InvalidModularAccountV2Mode/constructor",
+          },
+        ],
+      },
+      {
+        text: "InvalidNonceKeyError",
+        items: [
+          {
+            text: "constructor",
+            link: "/reference/aa-sdk/core/classes/InvalidNonceKeyError/constructor",
           },
         ],
       },
@@ -344,6 +388,10 @@ export const aaSdkCoreReferenceSidebar: SidebarItem[] = [
           {
             text: "privateKeyToAccountSigner",
             link: "/reference/aa-sdk/core/classes/LocalAccountSigner/privateKeyToAccountSigner",
+          },
+          {
+            text: "signAuthorization",
+            link: "/reference/aa-sdk/core/classes/LocalAccountSigner/signAuthorization",
           },
           {
             text: "signMessage",
@@ -468,10 +516,6 @@ export const aaSdkCoreReferenceSidebar: SidebarItem[] = [
   {
     text: "Resources",
     items: [
-      {
-        text: "React Native",
-        link: "/resources/react-native",
-      },
       {
         text: "Third Party",
         items: [

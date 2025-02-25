@@ -43,6 +43,14 @@ export const accountKitSmartContractsReferenceSidebar: SidebarItem[] = [
         link: "/reference/account-kit/smart-contracts/functions/createModularAccountAlchemyClient",
       },
       {
+        text: "createModularAccountV2",
+        link: "/reference/account-kit/smart-contracts/functions/createModularAccountV2",
+      },
+      {
+        text: "createModularAccountV2Client",
+        link: "/reference/account-kit/smart-contracts/functions/createModularAccountV2Client",
+      },
+      {
         text: "createMultiOwnerLightAccount",
         link: "/reference/account-kit/smart-contracts/functions/createMultiOwnerLightAccount",
       },
@@ -226,10 +234,6 @@ export const accountKitSmartContractsReferenceSidebar: SidebarItem[] = [
   {
     text: "Resources",
     items: [
-      {
-        text: "React Native",
-        link: "/resources/react-native",
-      },
       {
         text: "Third Party",
         items: [

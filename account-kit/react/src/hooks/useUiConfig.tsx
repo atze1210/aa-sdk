@@ -3,18 +3,15 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useRef,
   type PropsWithChildren,
 } from "react";
 import { create, useStore, type StoreApi } from "zustand";
 import { useShallow } from "zustand/react/shallow";
-import { IS_SIGNUP_QP } from "../components/constants.js";
 import type {
   AlchemyAccountsUIConfig,
   AuthIllustrationStyle,
 } from "../types.js";
-import { useSignerStatus } from "./useSignerStatus.js";
 
 type AlchemyAccountsUIConfigWithDefaults = Omit<
   Required<AlchemyAccountsUIConfig>,
@@ -67,18 +64,19 @@ export function useUiConfig<T = UiConfigStore>(
 ): T;
 
 /**
- * A custom hook for accessing UI configuration from the `UiConfigContext`. Allows optional selection of specific parts of the UI config state using a selector function.
+ * A custom [hook](https://github.com/alchemyplatform/aa-sdk/blob/main/account-kit/react/src/hooks/useUiConfig.tsx) for accessing UI configuration from the `UiConfigContext`. Allows optional selection of specific parts of the UI config state using a selector function.
+ * For editing and updating the underlying UI config on the fly.
+ *
+ * @param {(state: UiConfigStore) => T} [selector] - An optional function to select specific parts of the UI config state. [ref](https://github.com/alchemyplatform/aa-sdk/blob/main/account-kit/react/src/hooks/useUiConfig.tsx#L23)
+ * @returns {T} - The selected state passed through the selector function or the entire state if no selector is provided
+ * @throws Will throw an error if the `UiConfigContext` is not present in the component tree
  *
  * @example
- * ```tsx
+ * ```tsx twoslash
  * import { useUiConfig } from "@account-kit/react";
  *
  * const { illustrationStyle, auth } = useUiConfig(({ illustrationStyle, auth }) => ({ illustrationStyle, auth }));
  * ```
- *
- * @param {(state: UiConfigStore) => T} [selector] - An optional function to select specific parts of the UI config state
- * @returns {T} - The selected state passed through the selector function or the entire state if no selector is provided
- * @throws Will throw an error if the `UiConfigContext` is not present in the component tree
  */
 export function useUiConfig(
   selector?: (state: UiConfigStore) => UiConfigStore
@@ -96,30 +94,10 @@ export function UiConfigProvider({
   children,
   initialConfig,
 }: PropsWithChildren<{ initialConfig?: AlchemyAccountsUIConfig }>) {
-  const { isConnected } = useSignerStatus();
   const storeRef = useRef<StoreApi<UiConfigStore>>();
   if (!storeRef.current) {
     storeRef.current = createUiConfigStore(initialConfig);
   }
-
-  const { setModalOpen, addPasskeyOnSignup } = useStore(
-    storeRef.current,
-    useShallow(({ setModalOpen, auth }) => ({
-      setModalOpen,
-      addPasskeyOnSignup: auth?.addPasskeyOnSignup,
-    }))
-  );
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (
-      isConnected &&
-      addPasskeyOnSignup &&
-      urlParams.get(IS_SIGNUP_QP) === "true"
-    ) {
-      setModalOpen(true);
-    }
-  }, [addPasskeyOnSignup, isConnected, setModalOpen]);
 
   return (
     <UiConfigContext.Provider value={storeRef.current}>
