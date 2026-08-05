@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/alchemyplatform/aa-sdk/compare/v5.0.9...v5.1.0) (2026-08-05)
+
+### Features
+
+- **smart-accounts:** let 7702 accounts pick a custom delegation address ([#2558](https://github.com/alchemyplatform/aa-sdk/issues/2558)) ([6d2b6be](https://github.com/alchemyplatform/aa-sdk/commit/6d2b6bef632d216ae76014750764c444a1103201))
+
 ## [5.0.9](https://github.com/alchemyplatform/aa-sdk/compare/v5.0.8...v5.0.9) (2026-07-24)
 
 **Note:** Version bump only for package @alchemy/smart-accounts
