@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/alchemyplatform/aa-sdk/compare/v5.1.0...v5.1.1) (2026-08-12)
+
+### Bug Fixes
+
+- patch js-yaml CVE-2026-59870 ([#2561](https://github.com/alchemyplatform/aa-sdk/issues/2561)) ([a6fdcf9](https://github.com/alchemyplatform/aa-sdk/commit/a6fdcf95b88773f5f9db09712f6845392a7f7787))
+
 # [5.1.0](https://github.com/alchemyplatform/aa-sdk/compare/v5.0.9...v5.1.0) (2026-08-05)
 
 ### Features
