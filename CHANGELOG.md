@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/alchemyplatform/aa-sdk/compare/v5.1.1...v5.2.0) (2026-08-17)
+
+### Features
+
+- add MAv2 EIP-7702 version registry ([#2559](https://github.com/alchemyplatform/aa-sdk/issues/2559)) ([5ec87a3](https://github.com/alchemyplatform/aa-sdk/commit/5ec87a35be792c3affc03899efd6bdcc1a2020f0))
+
 ## [5.1.1](https://github.com/alchemyplatform/aa-sdk/compare/v5.1.0...v5.1.1) (2026-08-12)
 
 ### Bug Fixes
