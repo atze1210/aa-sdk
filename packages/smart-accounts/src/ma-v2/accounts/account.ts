@@ -23,6 +23,10 @@ import { accountFactoryAbi } from "../abis/accountFactoryAbi.js";
 import { EntityIdOverrideError } from "../../errors/EntityIdOverrideError.js";
 import { InvalidOwnerError } from "../../errors/InvalidOwnerError.js";
 import { DEFAULT_OWNER_ENTITY_ID, DefaultAddress } from "../utils/account.js";
+import {
+  ModularAccountV2VersionRegistry,
+  type SemiModularAccount7702Version,
+} from "../registry.js";
 import { LOGGER } from "../../logger.js";
 
 type Mode = "default" | "7702";
@@ -45,14 +49,26 @@ export type ToModularAccountV2Params<
       factory?: never;
       factoryData?: never;
       implementationAddress?: never;
-      /**
-       * The `SemiModularAccount7702` deployment to delegate to. Defaults to
-       * {@link DefaultAddress}`.SMAV2_7702`. Use this to delegate to a
-       * deployment the SDK doesn't have an address for.
-       */
-      delegationAddress?: Address;
-    }
+    } & (
+      | {
+          /**
+           * The SemiModularAccount7702 version to delegate to. Defaults to
+           * {@link DEFAULT_SMAV2_7702_VERSION}.
+           */
+          version?: SemiModularAccount7702Version;
+          delegationAddress?: never;
+        }
+      | {
+          version?: never;
+          /**
+           * A raw delegation address, for custom or unreleased deployments not
+           * in {@link ModularAccountV2VersionRegistry}.
+           */
+          delegationAddress?: Address;
+        }
+    )
   : {
+      version?: never;
       delegationAddress?: never;
       factory?: Address;
       implementationAddress?: Address;
@@ -113,15 +129,13 @@ export type ToModularAccountV2Params<
  * ```
  *
  * @example
- * In `7702` mode the account delegates to `DefaultAddress.SMAV2_7702` by
- * default. Pass `delegationAddress` to delegate to a different
- * `SemiModularAccount7702` deployment instead.
+ * In `7702` mode, choose a registered delegation version.
  * ```ts
  * const account = await toModularAccountV2({
  *   client,
  *   owner: privateKeyToAccount(generatePrivateKey()),
  *   mode: "7702",
- *   delegationAddress: "0x...",
+ *   version: "v1.1.0",
  * });
  * ```
  */
@@ -135,6 +149,7 @@ export async function toModularAccountV2<TMode extends Mode = Mode>({
   factory,
   factoryData: factoryData_,
   implementationAddress: implementationAddress_,
+  version,
   delegationAddress: delegationAddress_,
   mode,
 }: ToModularAccountV2Params<TMode>): Promise<ModularAccountV2> {
@@ -145,14 +160,20 @@ export async function toModularAccountV2<TMode extends Mode = Mode>({
     mode,
     hasDeferredAction: !!deferredAction,
     hasAccountAddress: !!accountAddress_,
-    ...(is7702 ? { hasDelegationAddress: !!delegationAddress_ } : {}),
+    ...(is7702 ? { version, hasDelegationAddress: !!delegationAddress_ } : {}),
   });
 
   const entityId = signerEntity?.entityId ?? DEFAULT_OWNER_ENTITY_ID;
 
   const factoryAddress = factory ?? DefaultAddress.MAV2_FACTORY;
 
-  const delegationAddress = delegationAddress_ ?? DefaultAddress.SMAV2_7702;
+  // Preserve legacy casing for the default and caller-supplied addresses.
+  const delegationAddress =
+    delegationAddress_ ??
+    (version
+      ? ModularAccountV2VersionRegistry.SemiModularAccount7702[version]
+          .delegationAddress
+      : DefaultAddress.SMAV2_7702);
 
   const implementationAddress =
     implementationAddress_ ??
